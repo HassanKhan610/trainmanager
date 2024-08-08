@@ -1,0 +1,116 @@
+/* traier/static/css/train-designer.css */
+
+.selected {
+    background-color: yellow;
+}
+
+
+.selected-row {
+    background-color: yellow;
+}
+.date-selector {
+    display: inline-block;
+}
+
+/* Styling for descriptor rows */
+.descriptor-rows {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.descriptor-row {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.descriptor-row:hover {
+    background-color: #f5f5f5;
+}
+
+.descriptor-row.selected {
+    background-color: yellow;
+}
+.table-container {
+    overflow-x: auto;
+    max-height: 400px; /* Adjust the height as needed */
+}
+
+
+
+
+/* (1) MENU  
+Table: 
+Symbol	Model ID	Plan ID	Execution Step	Load Data	Description	Start Train Date	End Train Date	Expiration to Process	Strike to Process
+string	int	int	int	checkbox for 0 or 1	string	date selector	date selector	int	int
+(2)buttons: Add, Duplicate, Filter, Save
+
+
+(3) LOAD DATA  
+Table: 
+Parameter	Value
+expiration day only	checkbox for 0 or 1
+min price call	float
+min price call sql	float
+max price call	float
+max price call sql	float
+min price put	float
+min price put sql	float
+max price put	float
+max price put sql	float
+analyze_features	checkbox for 0 or 1
+
+ (4)  HYPERPARAMETERS 
+Table: 
+Parameter	Value
+architecture	drop down
+optimizer	drop down
+learningrate	float
+epochs	float
+batch size	float
+dropout	float
+Istmunits	float
+cnn kernel	int
+cnn filter	int
+use weights	checkbox for 0 or 1
+use oversampled	checkbox for 0 or 1
+max_rows	int
+
+
+ (5) TEST DATA 
+Table: 
+Parameter	Value
+train_model	checkbox for 0 or 1
+target time (minutes)	int
+look forward window	int
+look backward Istm	int
+prediction threshold	float
+take profit	float
+
+
+(6) TRAIN SCOPE 
+Table: 
+Parameter	Value
+result time	read only
+training rows loaded	read only
+training rows filtered	read only
+train accuracy	read only
+train TP	read only
+train FP	read only
+testing rows loaded	read only
+testing rows filtered	read only
+test accuracy	read only
+test TP	read only
+test FP	read only
+
+
+ (7) RESULTS (READ-ONLY)
+Table: 
+Parameter	Value
+start test date	date selector
+end test date	date selector
+run what if	checkbox for 0 or 1
+save what if	checkbox for 0 or 1
+probability range	float, float, float
+take profit range	float, float, float */
